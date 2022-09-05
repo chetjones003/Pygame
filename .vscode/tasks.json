@@ -13,7 +13,7 @@
             },
             "presentation": {
                 "reveal": "silent",
-                "focus": false,
+                "focus": true,
                 "clear": true,
             }
         },

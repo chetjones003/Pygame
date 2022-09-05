@@ -1,8 +1,5 @@
-"""
-pygame is a free and open-source cross-platform library for the development
-of multimedia applications like video games using Python
-"""
 import sys
+import os
 import pygame
 
 pygame.init()
@@ -11,8 +8,8 @@ pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
 
 # first surface
-test_surface = pygame.Surface((100,200))
-test_surface.fill('Red')
+sky_image = pygame.image.load(os.path.join('IntroToPygame', 'graphics', 'Sky.png'))
+ground_image = pygame.image.load(os.path.join('IntrotoPygame', 'graphics', 'ground.png'))
 
 while True:
     for event in pygame.event.get():
@@ -20,7 +17,8 @@ while True:
             pygame.quit()
             sys.exit()
 
-    screen.blit(test_surface, (200,100))
+    screen.blit(sky_image, (0, 0))
+    screen.blit(ground_image, (0, 250))
 
     # draw all elements and update everything
     pygame.display.update()
